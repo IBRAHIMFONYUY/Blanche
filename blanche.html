@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Blanche</title>
+    
+</head>
+
+<body>
+    <div id="birthday-button" value=""></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    
+    <div id="birthday-message" >
+        <div class="typing-text">Happy Birthday Blanche! 🥳</div>
+    </div>
+    <div id="birthday-animation" >
+        <div class="container">
+            <div class="garden 1" id="garden-1" style="background-image: url('p2.jpg');" >
+                <!-- <img src="blanche.jpg" alt="Happy Birthday" class="birthday-image">
+                
+                <div class="butterfly"></div>
+                <div class="butterfly"></div>
+                <div class="butterfly"></div>
+                <div class="butterfly"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div> -->
+                
+                <div class="birthday-message"> <h2 style="animation: typing 2s ;">Happy Birthday!</h2><br>
+                <p>Wishing you a life full of joy, prosperity and happiness through out your good and challenging moments 🥳🥳♥</p>
+                <button id="next">next</button>
+                </div>
+                
+
+            </div>
+            <div class="garden sec" id="garden-2" style="background-image: url('p1.jpg');" ></div>
+                <!-- <img src="blanche.jpg" alt="Happy Birthday" class="birthday-image">
+                
+                <div class="butterfly"></div>
+                <div class="butterfly"></div>
+                <div class="butterfly"></div>
+                <div class="butterfly"></div>
+                <div class="confetti"></div>
+                <div class="confetti"></div> -->
+                
+                <div class="birthday-message sec" id="bms"> <h2 style="animation: typing 2s ; ">Happy Birthday!</h2><br>
+                <p style="line-break: auto; font-size: 15px;" >Wishing you The best of the best success<br> From your mouth to God's ears<br> and from him your blessings awiats🥳🥳♥</p>
+                <button id="prev">prev</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+
+        #birthday-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: none;
+            background-color: skyblue;
+            color: white;
+            animation: fade-in 2s ease-in-out;
+        }
+        #birthday-button:hover{
+            
+            background-color:  #ff69b4;
+        }
+        @keyframes fade-in {
+            from{
+                top: 100%;
+                opacity: 0.2;
+            }
+            to{
+                top: 50%;
+                opacity: 1;
+            }
+
+        }
+
+        .typing-text {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 20px;
+
+            animation: typing 3s steps(20);
+        }
+
+        @keyframes typing {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .garden {
+            position: relative;
+            width: 80%;
+            height: 90%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: change linear infinite 5s;
+            justify-content: center;
+            display: block;
+        }
+        .garden.sec{
+            display: none;
+            justify-content: center;
+            position: relative;
+        }
+        .birthday-message.sec{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            opacity: 0.9;
+            animation: typing 4s ;
+            display: none;
+        }
+
+        
+
+        .birthday-image {
+
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            width: 20%;
+            height: 40%;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            animation: bloom 2s infinite;
+            
+        }
+
+        .flower:nth-child(2) {
+            top: 20%;
+            left: 30%;
+            background-color: white;
+        }
+
+        .flower:nth-child(3) {
+            top: 40%;
+            left: 65%;
+        }
+
+        .flower:nth-child(4) {
+            top: 70%;
+
+            left: 2%;
+        }
+        .flower:nth-child(5) {
+            top: 80%;
+            background-color: white;
+            left: 40%;
+        }
+        .flower:nth-child(6) {
+            top: 30%;
+
+            left: 90%;
+        }
+        .flower:nth-child(7) {
+            top: 5%;
+
+            left: 50%;
+        }
+        .flower:nth-child(8) {
+            top: 90%;
+            background-color: white;
+            left: 90%;
+        }
+
+        .butterfly {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffc0cb;
+            border-radius: 50%;
+            animation: fly 3s infinite;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+            animation: fall 2s infinite;
+        }
+
+        .birthday-message {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            width: 100%;
+            opacity: 0.9;
+            animation: typing 4s ;
+
+        }
+        #birthday-message{
+            display: none;
+            position: relative;
+            text-align: center;
+            z-index: 100;
+        }
+        #birthday-animation{
+            display: none;
+        }
+
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(300px);
+            }
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(300px);
+            }
+
+        }
+        button{ 
+            height: 30px;
+            width: 70px;
+            background-color: rgb(247, 97, 122);
+            color: white;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+        @media (max-width:600px) {
+            .garden{
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        //slide
+        const next=document.getElementById('next');
+        const prev=document.getElementById('prev');
+        const gar1=document.getElementById('garden-1');
+        const gar2=document.getElementById('garden-2');
+        const bms=document.getElementById('bms')
+
+        next.addEventListener('click', ()=>{
+            gar1.style.display="none"
+            gar2.style.display="block"
+            bms.style.display="block"
+
+        })
+        prev.addEventListener('click', ()=>{
+            gar1.style.display="block"
+            gar2.style.display="none"
+            bms.style.display="none"
+        })
+
+        const birthdayButton = document.getElementById('birthday-button');
+        const birthdayMessage = document.getElementById('birthday-message');
+        const birthdayAnimation = document.getElementById('birthday-animation');
+
+        birthdayButton.addEventListener('click', () => {
+            birthdayButton.style.display = 'none';
+            birthdayMessage.style.display = 'block';
+            birthdayAnimation.style.display = 'block';
+        });
+
+        const name=prompt('Hi, please what is your name. The most common one😊');
+       if(name==='Blanche' || name==='Majo' || name==='Majo Blanche'|| name==='majo' || name==='blanche'  || name==='majo blanche'  || name==='Majo blanche' ){
+            birthdayButton.style.display='block'
+            birthdayButton.innerText=`Hello ${name} my boo 😊, I heard its your birthday, click me` 
+        }
+        else{
+           alert('Oops! wrong person😅')
+        }
+
+
+
+        // Add event listener to flowers for hover effect
+        const flowers = document.querySelectorAll('.flower');
+
+        flowers.forEach((flower) => {
+            flower.addEventListener('mouseover', () => {
+                flower.style.transform = 'scale(1.7)';
+            });
+            flower.addEventListener('mouseout', () => {
+                flower.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add event listener to butterfly for flight effect
+        const butterfly = document.querySelector('.butterfly');
+
+        butterfly.addEventListener('animationiteration', () => {
+            butterfly.style.top = `${Math.random() * 100}%`;
+            butterfly.style.left = `${Math.random() * 100}%`;
+            butterfly.style.right = `${Math.random() * 100}%`;
+        });
+
+        // Add event listener to confetti for falling effect
+        const confetti = document.querySelector('.confetti');
+
+        confetti.addEventListener('animationiteration', () => {
+            confetti.style.top = `${Math.random() * 100}%`;
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.right = `${Math.random() * 100}%`;
+        });
+    </script>
+</body>
+
+</html>
