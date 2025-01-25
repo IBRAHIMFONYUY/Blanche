@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Blanche 😊</title>
+    <title>Happy Birthday Sarah</title>
     
 </head>
 
@@ -20,11 +20,11 @@
     <div class="flower"></div>
     
     <div id="birthday-message" >
-        <div class="typing-text">Happy Birthday Blanche! 🥳</div>
+        <div class="typing-text">Happy Birthday Sarah! 🥳</div>
     </div>
     <div id="birthday-animation" >
         <div class="container">
-            <div class="garden 1" id="garden-1" style="background-image: url('p2.jpg');" >
+            <div class="garden 1" id="garden-1" style="background-image: url('P2.jpg');" >
                 <!-- <img src="blanche.jpg" alt="Happy Birthday" class="birthday-image">
                 
                 <div class="butterfly"></div>
@@ -35,13 +35,14 @@
                 <div class="confetti"></div> -->
                 
                 <div class="birthday-message"> <h2 style="animation: typing 2s ;">Happy Birthday!</h2><br>
-                <p>Wishing you a life full of joy, prosperity and happiness through out your good and challenging moments 🥳🥳♥</p>
+               
+ <p>To the most awesome girl, Wishing you a life full of joy, prosperity and happiness through out your good and challenging moments 🥳🥳♥</p>
                 <button id="next">next</button>
                 </div>
                 
 
             </div>
-            <div class="garden sec" id="garden-2" style="background-image: url('p1.jpg');" ></div>
+            <div class="garden sec" id="garden-2" style="background-image: url('P1.jpg');" ></div>
                 <!-- <img src="blanche.jpg" alt="Happy Birthday" class="birthday-image">
                 
                 <div class="butterfly"></div>
@@ -51,8 +52,8 @@
                 <div class="confetti"></div>
                 <div class="confetti"></div> -->
                 
-                <div class="birthday-message sec" id="bms"> <h2 style="animation: typing 2s ; ">Happy Birthday!</h2><br>
-                <p style="line-break: auto; font-size: 15px;" >Wishing you The best of the best success<br> From your mouth to God's ears<br> and from him your blessings awiats🥳🥳♥</p>
+                <div class="birthday-message sec" id="bms" > <h2 style="animation: typing 2s ; ">Happy Birthday!</h2><br>
+ <p style="line-break: auto; font-size: 15px;">Your smile is like a sunset in a garden, warm and breathtaking. You bloom like a flower, captivating my heart with your tender beauty<br/> Wishing you The best of success<br> From your mouth to God's ears<br> and from him your blessings awiats🥳🥳♥</p>
                 <button id="prev">prev</button>
                 </div>
 
@@ -74,7 +75,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 20px 40px;
+            padding: 10px 10px;
             font-size: 20px;
             border: none;
             border-radius: 10px;
@@ -83,6 +84,8 @@
             background-color: skyblue;
             color: white;
             animation: fade-in 2s ease-in-out;
+            width: 300px;
+            text-align: center;
         }
         #birthday-button:hover{
             
@@ -138,6 +141,8 @@
             animation: change linear infinite 5s;
             justify-content: center;
             display: block;
+            background-color: rgba(0,0,0,0.2);
+            background-blend-mode: Multiply;
         }
         .garden.sec{
             display: none;
@@ -146,11 +151,12 @@
         }
         .birthday-message.sec{
             position: absolute;
-            top: 80%;
+            top: 85%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-size: 15px;
-            color: white;
+            color: linear-gradient(left, white, black);
+            
             text-align: center;
             width: 100%;
             opacity: 0.9;
@@ -301,6 +307,14 @@
             cursor: pointer;
             border: none;
         }
+        footer{
+          text-align: center;
+          color: white;
+          border-top: 0px;
+          span{
+            color: skyblue;
+          }
+        }
         @media (max-width:600px) {
             .garden{
                 width: 100%;
@@ -338,10 +352,10 @@
             birthdayAnimation.style.display = 'block';
         });
 
-        const name=prompt('Hi, please what is your name. The most common one😊');
-       if(name==='Blanche' || name==='Majo' || name==='Majo Blanche'|| name==='majo' || name==='blanche'  || name==='majo blanche'  || name==='Majo blanche' ){
+        const name=prompt('Hi, please insert your name 😊');
+       if(name==='sarah' || name==='Sarah' || name==='sarah '|| name==='SARAH'){
             birthdayButton.style.display='block'
-            birthdayButton.innerText=`Hello ${name} my boo 😊, I heard its your birthday, click me` 
+            birthdayButton.innerHTML=`Hello ${name} my boo 😊 <br/> click me` 
         }
         else{
            alert('Oops! wrong person😅')
@@ -379,6 +393,7 @@
             confetti.style.right = `${Math.random() * 100}%`;
         });
     </script>
+    <footer> Made with love♥ by <span>Rahim</span></footer>
 </body>
 
 </html>
